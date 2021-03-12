@@ -11,6 +11,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
+		zIndex: "2",
 	},
 	menuButton: {
 		marginRight: theme.spacing(2),
@@ -18,15 +19,26 @@ const useStyles = makeStyles((theme) => ({
 	title: {
 		flexGrow: 1,
 		marginLeft: "1rem",
-		marginRIght: "1rem",
+		marginRight: "1rem",
+		letterSpacing: "0.07rem",
+		fontWeight: "500",
+		fontSize: "2rem",
+		padding: "1.4rem 0.3rem",
+		[theme.breakpoints.down("sm")]: {
+			fontSize: "1.5rem",
+			marginLeft: "0.4rem"
+		},
 	},
 	nav: {
 		backgroundColor: "#1e212d",
 		color: "#f88f01",
 	},
 	link: {
-		marginLeft: "4rem",
-		marginRIght: "4rem",
+		marginLeft: "1rem",
+		marginRight: "3rem",
+		fontWeight: "400",
+		fontSize: "1.1rem",
+		padding: "1.3rem 0.25rem",
 	},
 	menuItem: {
 		backgroundColor: "#1e212d",
@@ -84,26 +96,17 @@ export default function Navbar() {
 								onClose={handleClose}
 							>
 								<MenuItem onClick={handleClose}>
-									<Button
-										color="inherit"
-										size="large"
-									>
+									<Button color="inherit" size="large">
 										About
 									</Button>
 								</MenuItem>
 								<MenuItem onClick={handleClose}>
-									<Button
-										color="inherit"
-										size="large"
-									>
+									<Button color="inherit" size="large">
 										Project
 									</Button>
 								</MenuItem>
 								<MenuItem onClick={handleClose}>
-									<Button
-										color="inherit"
-										size="large"
-									>
+									<Button color="inherit" size="large">
 										Contact
 									</Button>
 								</MenuItem>

@@ -1,0 +1,10 @@
+.tsparticles-canvas-el {
+	position: absolute;
+	height: 88vh;
+	width: 100vw;
+	z-index: 1;
+}
+
+.MuiToolbar-root {
+	z-index: 2;
+}

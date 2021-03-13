@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
 function Hero() {
 	const classes = useStyles();
 	return (
-		<div className={classes.heroContainer}>
+		<div id="top" className={classes.heroContainer}>
 			<div className={classes.innerDiv}>
 				<div className={classes.text}>
 					<h1 className={classes.infoHead}>I am Sriram Goparaju</h1>

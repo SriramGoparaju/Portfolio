@@ -96,7 +96,7 @@ function Projects() {
 	const classes = useStyles();
 	return (
 		<div className={classes.projectsSection}>
-			<h1 className={classes.headTitle}>My Projects</h1>
+			<h1 id="projects" className={classes.headTitle}>My Projects</h1>
 			<div className={classes.container}>
 				<div className={classes.firstRow}>
 					<div className={classes.card}>

@@ -8,10 +8,14 @@ import Button from "@material-ui/core/Button";
 import { useMediaQuery } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
+import { Link } from "react-scroll";
+
 const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
 		zIndex: "2",
+		position: "sticky",
+		top: 0,
 	},
 	menuButton: {
 		marginRight: theme.spacing(2),
@@ -26,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: "1.4rem 0.3rem",
 		[theme.breakpoints.down("sm")]: {
 			fontSize: "1.5rem",
-			marginLeft: "0.4rem"
+			marginLeft: "0.4rem",
 		},
 	},
 	nav: {
@@ -34,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 		color: "#f88f01",
 	},
 	link: {
-		marginLeft: "1rem",
+		marginLeft: "0.5rem",
 		marginRight: "3rem",
 		fontWeight: "400",
 		fontSize: "1.1rem",
@@ -69,6 +73,7 @@ export default function Navbar() {
 					<Typography variant="h5" className={classes.title}>
 						Sriram Goparaju
 					</Typography>
+
 					{isMobile ? (
 						<div>
 							<IconButton
@@ -96,33 +101,140 @@ export default function Navbar() {
 								onClose={handleClose}
 							>
 								<MenuItem onClick={handleClose}>
-									<Button color="inherit" size="large">
-										About
-									</Button>
+									<Link
+										activeClass="active"
+										to="top"
+										spy={true}
+										smooth={true}
+										offset={-70}
+										duration={500}
+									>
+										<Button
+											className={classes.link}
+											color="inherit"
+										>
+											Home
+										</Button>
+									</Link>
 								</MenuItem>
 								<MenuItem onClick={handleClose}>
-									<Button color="inherit" size="large">
-										Project
-									</Button>
+									<Link
+										activeClass="active"
+										to="about"
+										spy={true}
+										smooth={true}
+										offset={-70}
+										duration={500}
+									>
+										<Button
+											className={classes.link}
+											color="inherit"
+										>
+											About
+										</Button>
+									</Link>
 								</MenuItem>
 								<MenuItem onClick={handleClose}>
-									<Button color="inherit" size="large">
-										Contact
-									</Button>
+									<Link
+										activeClass="active"
+										to="projects"
+										spy={true}
+										smooth={true}
+										offset={-70}
+										duration={500}
+									>
+										<Button
+											className={classes.link}
+											color="inherit"
+										>
+											Projects
+										</Button>
+									</Link>
+								</MenuItem>
+								<MenuItem onClick={handleClose}>
+									<Link
+										activeClass="active"
+										to="contact"
+										spy={true}
+										smooth={true}
+										offset={-70}
+										duration={500}
+									>
+										<Button
+											className={classes.link}
+											color="inherit"
+										>
+											Contact
+										</Button>
+									</Link>
 								</MenuItem>
 							</Menu>
 						</div>
 					) : (
 						<div>
-							<Button className={classes.link} color="inherit">
-								About
-							</Button>
-							<Button className={classes.link} color="inherit">
-								Projects
-							</Button>
-							<Button className={classes.link} color="inherit">
-								Contact
-							</Button>
+							<Link
+								activeClass="active"
+								to="top"
+								spy={true}
+								smooth={true}
+								offset={-70}
+								duration={500}
+							>
+								<Button
+									className={classes.link}
+									color="inherit"
+								>
+									Home
+								</Button>
+							</Link>
+
+							<Link
+								activeClass="active"
+								to="about"
+								spy={true}
+								smooth={true}
+								offset={-70}
+								duration={500}
+							>
+								<Button
+									className={classes.link}
+									color="inherit"
+								>
+									About
+								</Button>
+							</Link>
+
+							<Link
+								activeClass="active"
+								to="projects"
+								spy={true}
+								smooth={true}
+								offset={-70}
+								duration={500}
+							>
+								<Button
+									className={classes.link}
+									color="inherit"
+								>
+									Projects
+								</Button>
+							</Link>
+
+							<Link
+								activeClass="active"
+								to="contact"
+								spy={true}
+								smooth={true}
+								offset={-70}
+								duration={500}
+							>
+								<Button
+									className={classes.link}
+									color="inherit"
+								>
+									Contact
+								</Button>
+							</Link>
 						</div>
 					)}
 				</Toolbar>

@@ -71,7 +71,7 @@ function About() {
 
 	return (
 		<div className={classes.aboutSection}>
-			<h1 className={classes.title}>About Me</h1>
+			<h1 id="about" className={classes.title}>About Me</h1>
 			<div className={classes.mainContainer}>
 				<div className={classes.imageContainer}>
 					<img className={classes.image} src={about} alt="working" />

@@ -193,7 +193,7 @@ function Contact() {
 	return (
 		<ThemeProvider theme={theme}>
 			<div className={classes.mainContainer}>
-				<h1 className={classes.title}>Contact Us</h1>
+				<h1 id="contact" className={classes.title}>Contact Me</h1>
 				<p className={classes.subtitle}>
 					Fill out this form to send me an email
 				</p>

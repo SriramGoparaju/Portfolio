@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
 		[theme.breakpoints.down("md")]: {
 			width: "100%",
 			padding: "0 1rem",
-			fontSize: "1.1rem",
+			fontSize: "1rem",
 		},
 	},
 }));

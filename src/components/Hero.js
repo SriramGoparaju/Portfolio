@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 		top: "50%",
 		left: "50%",
 		transform: `translate(${-50}%, ${-50}%)`,
-		zIndex: 2,
+		zIndex: 1,
 	},
 	infoHead: {
 		margin: 0,

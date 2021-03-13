@@ -56,7 +56,13 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: "1.2rem",
 		fontWeight: "500",
 		margin: "1rem",
-		backgroundColor: "#f88f01",
+		color: "#f88f01",
+		borderColor: "#f88f01",
+		"&:hover": {
+			backgroundColor: "#f88f01",
+			color: "black",
+			borderColor: "#f88f01",
+		},
 		[theme.breakpoints.down("sm")]: {
 			padding: "0.2rem 2rem",
 			fontSize: "1.1rem",
@@ -87,14 +93,14 @@ function Hero() {
 					<div className={classes.buttonsDiv}>
 						<Button
 							className={classes.button}
-							variant="contained"
+							variant="outlined"
 							color="secondary"
 						>
 							Resume
 						</Button>
 						<Button
 							className={classes.button}
-							variant="contained"
+							variant="outlined"
 							color="secondary"
 							href="https://github.com/SriramGoparaju"
 							target="_blank"
